@@ -25,7 +25,7 @@ export default function Nav(){
 
     return(
         
-        <nav className={`flex flex-row gap-6 justify-between h-[90px] sm:h-[160px] sm:justify-around fixed z-10 w-full ${isScrolled ? "bg-[#000000a2] backdrop-blur-md shadow-lg animate__animated animate__pulse" : "bg-transparent"}`} >
+        <nav className={`flex flex-row gap-6 justify-between h-[90px] sm:h-[160px] sm:justify-around fixed z-20 w-full ${isScrolled ? "bg-[#000000a2] backdrop-blur-md shadow-lg animate__animated animate__pulse" : "bg-transparent"}`} >
         
             <Link href="/" className="z-10">
                 <Image
@@ -37,7 +37,7 @@ export default function Nav(){
                 />
             </Link>
             <ul className={`${menuOpen ? "flex flex-col gap-6 text-white items-end right-0 bg-[#000000cf] w-full backdrop-blur-md sm:block absolute top-0 p-[100px_30px_10px_0px] text-md" : "sm:flex flex-row gap-14 text-white items-center text-2xl hidden" }`}>
-                <li className={`${menuOpen ? "text-lg" : "text-2xl" }`}>Tarifas</li>
+                <li className={`${menuOpen ? "text-lg" : "text-2xl" }`}><Link href="tarifas">Tarifas</Link></li>
                 <li className={`${menuOpen ? "text-lg" : "text-2xl" }`}>Reservas</li>
                 <li className={`${menuOpen ? "text-lg" : "text-2xl" }`}><Link href="#contact">Contacto</Link></li>
             </ul>
