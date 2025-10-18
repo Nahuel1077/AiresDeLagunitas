@@ -28,7 +28,8 @@ export default function Home() {
         <p className="text-lg sm:text-xl">Un lugar excelente para desconectar y disfrutar</p>
         <p className="sm:text-xl">¡No te vas a arrepentir!</p>
       </div>
-      <GridImages/>
+      <Carousel/>
+      
       <Activities/>
     </div>
   );

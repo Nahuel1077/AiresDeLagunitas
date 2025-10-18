@@ -1,12 +1,12 @@
 export default function Contact(){
 
     return(
-        <section id="contact" className="w-full flex flex-col items-center bg-blue-100">
+        <section id="contact" className="w-full flex flex-col items-center bg-blue-100 gap-8 sm:gap-0">
             <div className="pt-8 text-center">
                 <h3 className="text-3xl h3 font-semibold">Contáctenos</h3>
                 <p>¿Listo para planear tu próxima escapada?</p>
             </div>
-            <div className="sm:p-[4rem] p-2 flex flex-col xl:flex-row w-full">
+            <div className="sm:p-[4rem] p-2 flex flex-col xl:flex-row w-full gap-8 sm:gap-0">
                 <div className="flex flex-col self-center w-full sm:max-w-[70%] xl:w-full sm:p-[4rem] rounded-2xl bg-white gap-6 shadow-[black_0px_0px_10px_0px]">
                     <h3 className="text-3xl h3 font-semibold p-4">Escríbanos</h3>
                     <form className="gap-10 flex flex-col p-4" action="https://formsubmit.co/nahuh08@gmail.com" method="POST">
