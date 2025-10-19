@@ -54,3 +54,8 @@ body {
 .h1{
   font-size: 4rem;
 }
+
+.highlight{
+  color: #275717;
+  font-weight: 600;
+}

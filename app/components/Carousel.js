@@ -43,15 +43,14 @@ export default function Carousel(){
   return (
     <section className="flex flex-col items-center sm:pb-4 gap-4 p-6 sm:p-16">
       <h3 className="h3 text-3xl font-semibold">Nuestras cabañas</h3>
-      <p className="text-center">Todo lo que necesitas para una excelente estadía</p>
+      <p className="text-center">Todo lo que necesitas para una <span className="highlight">excelente</span> estadía</p>
       <div className="flex flex-col items-center w-full h-[300px] sm:h-[700px] relative overflow-hidden">
-      {/* <div className="flex flex-col items-center w-full sm:w-[800px] h-[500px] relative overflow-hidden"> */}
         <Image
           width={1450}
           height={700}
           src={carouselImages[imageIndex].src}
           alt={`Imagen ${imageIndex + 1}`}
-          className={`w-full h-[300px] sm:w-[70vw] sm:h-[700px] animate__animated ${animation} object-cover sm:object-scale-down`}
+          className={`w-full h-[300px] sm:w-[70vw] sm:h-[700px] animate__animated ${animation} object-cover sm:object-scale-down rounded-[2%]`}
           id={`Imagen ${imageIndex + 1}`}
         />
         

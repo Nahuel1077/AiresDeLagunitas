@@ -19,13 +19,13 @@ export default function Home() {
           <h1 className="sm:text-6xl text-shadow-lg text-center">Escapada a Villa General Belgrano</h1>
           <p className="sm:text-3xl text-shadow-lg">Animate a respirar el aire de las sierras</p>
         </div>
-        <div className="sm:absolute sm:bottom-[300px] relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
+        <div className="xl:absolute sm:bottom-[300px] xl:block contents relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
           <Link href="#"><button className="button">Ver tarifas</button></Link>
         </div>
       </div>
       <div className="w-full text-justify sm:text-center p-3 sm:p-20 bg-gray-100">
-        <p className="text-lg sm:text-2xl">Vení a disfrutar de una estadía tranquila, en un pueblo serrano con estilo centroeuropeo</p>
-        <p className="text-lg sm:text-xl">Un lugar excelente para desconectar y disfrutar</p>
+        <p className="text-lg sm:text-2xl">Vení a disfrutar de una estadía <span className="highlight">tranquila</span>, en un pueblo serrano con estilo centroeuropeo</p>
+        <p className="text-lg sm:text-xl">Un lugar excelente para <span className="highlight">desconectar</span> y <span className="highlight">disfrutar</span></p>
         <p className="sm:text-xl">¡No te vas a arrepentir!</p>
       </div>
       <Carousel/>

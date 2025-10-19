@@ -13,18 +13,34 @@ export default function Tarifas() {
     return(
         <section>
             <div className="flex flex-col items-center justify-center w-full bg-gray-100">
-                <Image
-                src="/img/hero1.jpg"
-                alt="portada"
-                width={2000}
-                height={2000}
-                className="sm:w-full sm:h-[90vh] object-contain sm:object-cover object-center brightness-50"
-                />
+                <div className="flex flex-row items-center w-full">
+                    <Image
+                    src="/img/hero-dique.jpg"
+                    alt="portada"
+                    width={2000}
+                    height={2000}
+                    className="hidden lg:block w-1/3 h-[90vh] object-contain sm:object-cover object-center brightness-50"
+                    />
+                    <Image
+                    src="/img/hero1.jpg"
+                    alt="portada"
+                    width={2000}
+                    height={2000}
+                    className="w-full lg:w-1/3 sm:h-[90vh] object-cover object-center brightness-50 lg:border-l-6 lg:border-r-6 lg:border-black border-0"
+                    />
+                    <Image
+                    src="/img/hero-cerveza.jpg"
+                    alt="portada"
+                    width={2000}
+                    height={2000}
+                    className="hidden lg:block w-1/3 h-[90vh] object-contain sm:object-cover object-center brightness-50"
+                    />
+                </div>
                 <div className="absolute flex flex-col gap-4 sm:gap-[3rem] text-white items-center justify-center sm:text-3xl">
                 <h1 className="sm:text-6xl text-xl text-shadow-lg text-center">¡Cabañas a estrenar!</h1>
                 <p className="sm:text-3xl text-xl text-shadow-lg">A pocos minutos del centro</p>
             </div>
-            <div className="sm:absolute sm:bottom-[300px] relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
+            <div className="xl:absolute sm:bottom-[300px] xl:block contents relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
                 <Link href="#"><button className="button">Reservar</button></Link>
             </div>
             </div>
