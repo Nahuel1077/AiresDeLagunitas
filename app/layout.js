@@ -19,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <meta name="author" content="Nahuel Ezequiel Henríquez"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
@@ -52,11 +52,11 @@ export default function RootLayout({ children }) {
             <li>Contacto</li>
           </ul>
           <Image
-          width={280}
-          height={280}
+          width={200}
+          height={200}
           alt="logo"
-          src="/img/logo.svg"
-          className="sm:w-[280] w-[150px]"
+          src="/img/logo.png"
+          className="sm:w-[150px] w-[120px]"
           />
         </section>
         </footer>
