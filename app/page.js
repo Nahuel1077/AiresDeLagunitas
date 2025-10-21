@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Carousel from "./components/Carousel";
 import Activities from "./components/Activities";
-import GridImages from "./components/GridImages";
 import Link from "next/link";
 
 export default function Home() {
@@ -20,7 +19,7 @@ export default function Home() {
           <p className="sm:text-3xl text-shadow-lg">Animate a respirar el aire de las sierras</p>
         </div>
         <div className="xl:absolute sm:bottom-[300px] xl:block contents relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
-          <Link href="/tarifas"><button className="button">Ver tarifas</button></Link>
+          <Link href="/tarifas/#promo"><button className="button">Ver tarifas</button></Link>
         </div>
       </div>
       <div className="w-full text-justify sm:text-center p-3 sm:p-20 bg-gray-100">

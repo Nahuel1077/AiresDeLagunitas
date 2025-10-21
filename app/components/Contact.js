@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Contact(){
 
     return(
@@ -42,14 +44,14 @@ export default function Contact(){
                                 📞
                                 <ul className="flex flex-col items-start">
                                     <li>Teléfono</li>
-                                    <li>1127194665</li>
+                                    <Link href="https://wa.link/d5uwck">+54 9 1127194665</Link>
                                 </ul>
                             </div>
                             <div className="flex flex-row gap-4">
                                 ✉
                                 <ul className="flex flex-col items-start">
                                     <li>Email</li>
-                                    <li>airesdelagunitas@gmail.com</li>
+                                    <Link href="mailto:airesdelagunitas@gmail.com?subject=Consulta%20sobre%20reserva">airesdelagunitas@gmail.com</Link>
                                 </ul>
                             </div>
                             <div className="flex flex-row gap-4">

@@ -5,13 +5,13 @@ import Link from "next/link";
 export default function Tarifas() {
 
     const tarifas = [
-        {id:1, title:"día", price:"---", discount:"---", percent:"N%"},
-        {id:2, title:"semana", price:"---", discount:"---", percent:"N%"},
-        {id:3, title:"quincena", price:"---", discount:"---", percent:"N%"},
+        {id:1, title:"día", price:55000, discount:5000,},
+        {id:2, title:"semana", price:385000, discount:40000,},
+        {id:3, title:"quincena", price:770000, discount:115500,},
     ];
 
     return(
-        <section>
+        <section className="flex flex-col items-center gap-4">
             <div className="flex flex-col items-center justify-center w-full bg-gray-100">
                 <div className="flex flex-row items-center w-full">
                     <Image
@@ -41,18 +41,22 @@ export default function Tarifas() {
                 <p className="sm:text-3xl text-xl text-shadow-lg">A pocos minutos del centro</p>
             </div>
             <div className="xl:absolute sm:bottom-[300px] xl:block contents relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
-                <Link href="#"><button className="button">Reservar</button></Link>
+                <Link href="#"><button className="button" id="promo">Booking</button></Link>
             </div>
             </div>
-            <Carousel/>
-            <div className="flex flex-col lg:flex-row gap-4 items-start p-6 sm:p-16 justify-evenly">
-                {tarifas.map((t) => (<div key={t.id} className="card flex flex-col gap-2 w-[200px] text-center p-4">
-                    <h4 className="h3">Por {t.title}</h4>
-                    <h3 className="h3">{t.price}</h3>
-                    <h1 className="h1">{t.discount}</h1>
-                    <p>¡Descuento:</p>
-                    <h1 className="h1 text-[#275717]">{t.percent}!</h1>
-                </div>))}
+            <div className="flex flex-col items-center w-full">
+                <h3 className="highlight sm:h1 text-3xl text-center sm:p-10 p-4">¡Promo de estreno!</h3>
+                <div className="flex flex-col lg:flex-row gap-4 items-center p-6 sm:p-16 justify-evenly w-full">
+                    {tarifas.map((t) => (<div key={t.id} className="card bg-[#fffbce] flex flex-col gap-2 w-[200px] text-center p-4 justify-self-stretch">
+                        <h4 className="h3">Por {t.title}</h4>
+                        <h3 className="h3">Desde ${t.price}</h3>
+                        <h1 className="text-3xl">-{t.discount}</h1>
+                        <p>¡Descuento: {Math.round(t.discount/t.price*100)}%!</p>
+                        <h1 className="text-3xl font-semibold text-[#275717]">Total: ${t.price-t.discount}</h1>
+                    </div>))}
+                </div>
+                <p>*Reservando directamente.</p>
+                <p>*Tarifas sujetas a disponibilidad y temporada.</p>
             </div>
 
         </section>

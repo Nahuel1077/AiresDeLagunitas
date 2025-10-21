@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import 'animate.css';
+import Link from "next/link";
 
 const rubik = Rubik({
   weight: ['400', '600', '900'],
@@ -46,10 +47,10 @@ export default function RootLayout({ children }) {
           </div>
           <Contact/>
           <section className="flex flex-col p-6 sm:flex-row-reverse gap-6 justify-around items-center bg-black">
-          <ul className="flex flex-col sm:flex-row gap-2 text-white items-center text-md">
-            <li>Tarifas</li>
-            <li>Reservas</li>
-            <li>Contacto</li>
+          <ul className="flex flex-col  gap-2 text-white items-center text-md">
+            <Link href="/faq">FAQ</Link>
+            <Link href="#">Reservas</Link>
+            <Link href="https://drive.google.com/file/d/1cIs1G59Jhd0PJicem7LUxk6emLb8Op6q/view">Términos y condiciones</Link>
           </ul>
           <Image
           width={200}
