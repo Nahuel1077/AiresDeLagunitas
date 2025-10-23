@@ -11,7 +11,7 @@ export default function Tarifas() {
     ];
 
     return(
-        <section className="flex flex-col items-center gap-4">
+        <section className="flex flex-col items-center gap-4 bg-[#f3f4f6]">
             <div className="flex flex-col items-center justify-center w-full bg-gray-100">
                 <div className="flex flex-row items-center w-full">
                     <Image

@@ -13,7 +13,7 @@ const rubik = Rubik({
 });
 
 export const metadata = {
-  title: "Aires de Lagunitas",
+  title: "Altos de Lagunitas",
   description: "Alquila cabañas familiares en Villa General Belgrano, Córdoba. Tranquilidad, naturaleza y vistas a las sierras. Precios baratos. Reserva online.",
 };
 
@@ -48,9 +48,9 @@ export default function RootLayout({ children }) {
           <Contact/>
           <section className="flex flex-col p-6 sm:flex-row-reverse gap-6 justify-around items-center bg-black">
           <ul className="flex flex-col  gap-2 text-white items-center text-md">
-            <Link href="/faq">FAQ</Link>
-            <Link href="#">Reservas</Link>
-            <Link href="https://drive.google.com/file/d/1cIs1G59Jhd0PJicem7LUxk6emLb8Op6q/view">Términos y condiciones</Link>
+            <Link href="/faq" className="hover:underline">FAQ</Link>
+            <Link href="#" className="hover:underline">Reservas</Link>
+            <Link className="hover:underline" href="https://drive.google.com/file/d/1cIs1G59Jhd0PJicem7LUxk6emLb8Op6q/view">Términos y condiciones</Link>
           </ul>
           <Image
           width={200}
@@ -60,6 +60,7 @@ export default function RootLayout({ children }) {
           className="sm:w-[150px] w-[120px]"
           />
         </section>
+        <p className={`${rubik.className} bg-black text-center text-white`}>Altos de Lagunitas® - 2025</p>
         </footer>
       </body>
     </html>
