@@ -5,9 +5,8 @@ import Link from "next/link";
 export default function Tarifas() {
 
     const tarifas = [
-        {id:1, title:"día", price:55000, discount:5000,},
-        {id:2, title:"semana", price:385000, discount:40000,},
-        {id:3, title:"quincena", price:770000, discount:115500,},
+        {id:1, title:"semana", price:1400000, discount:10,},
+        {id:2, title:"quincena", price:2500000, discount:15,},
     ];
 
     return(
@@ -49,14 +48,16 @@ export default function Tarifas() {
                 <div className="flex flex-col lg:flex-row gap-4 items-center p-6 sm:p-16 justify-evenly w-full">
                     {tarifas.map((t) => (<div key={t.id} className="card bg-[#fffbce] flex flex-col gap-2 w-[200px] text-center p-4 justify-self-stretch">
                         <h4 className="h3">Por {t.title}</h4>
-                        <h3 className="h3">Desde ${t.price}</h3>
-                        <h1 className="text-3xl">-{t.discount}</h1>
-                        <p>¡Descuento: {Math.round(t.discount/t.price*100)}%!</p>
-                        <h1 className="text-3xl font-semibold text-[#275717]">Total: ${t.price-t.discount}</h1>
+                        <h3 className="h3">Desde ${t.price*t.discount/100+t.price}</h3>
+                        <h1 className="text-3xl">-${t.price*t.discount/100}</h1>
+                        <p>¡Descuento: {t.discount}%!</p>
+                        <h1 className="text-3xl font-semibold text-[#275717]">Total: ${t.price}</h1>
                     </div>))}
                 </div>
                 <p>*Reservando directamente.</p>
                 <p>*Tarifas sujetas a disponibilidad y temporada.</p>
+                <p>*Tarifas con impuestos incluidos.</p>
+                <p>*Para alquilar por día, por favor contáctenos.</p>
             </div>
 
         </section>
