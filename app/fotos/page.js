@@ -24,7 +24,6 @@ export default function Fotos(){
                 <Link href="#"><button className="button">Reservar</button></Link>
             </div>
             </div>
-            <h3 className="h3 text-center">Vea más fotos</h3>
              <GridImages/>
         </section>
     )
