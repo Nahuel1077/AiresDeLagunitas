@@ -4,15 +4,15 @@ import Image from "next/image";
 
 
 const carouselImages = [
-        {id:1, src:"/img/carousel-patio.jpeg", alt:"patio"},
-        {id:2, src:"/img/carousel-quincho.jpeg", alt:"quincho"},
-        {id:3, src:"/img/carousel-quincho2.jpeg", alt:"quincho"},
-        {id:4, src:"/img/carousel-pileta.jpeg", alt:"pileta"},
-        {id:5, src:"/img/carousel-pileta2.jpeg", alt:"pileta"},
+        {id:1, src:"/img/exterior1.jpg", alt:"cabaña exterior"},
+        {id:2, src:"/img/living9.jpg", alt:"living"},
+        {id:3, src:"/img/cocina2.jpg", alt:"cocina"},
+        {id:4, src:"/img/matrimonial4.jpg", alt:"matrimonial"},
+        {id:5, src:"/img/doble3.jpg", alt:"doble"},
         {id:6, src:"/img/carousel-pileta3.jpeg", alt:"pileta"},
-        {id:7, src:"/img/carousel-rio.jpeg", alt:"río"},
-        {id:8, src:"/img/carousel-rio2.jpeg", alt:"río"},
-        {id:9, src:"/img/cristo-grande.jpg", alt:"Cristo Grande"},
+        {id:7, src:"/img/exteriornoche2.jpg", alt:"exterior noche"},
+        {id:8, src:"/img/carousel-rio.jpeg", alt:"rio los reartes"},
+        {id:9, src:"/img/carousel-rio2.jpeg", alt:"rio los reartes"},
     ]
 
 export default function Carousel(){
@@ -50,7 +50,7 @@ export default function Carousel(){
           height={700}
           src={carouselImages[imageIndex].src}
           alt={`Imagen ${imageIndex + 1}`}
-          className={`w-full h-[300px] sm:w-[70vw] sm:h-[700px] animate__animated ${animation} object-cover sm:object-scale-down rounded-[2%]`}
+          className={`w-full h-[300px] sm:w-[70vw] sm:h-[500px] 2xl:h-[700px] animate__animated ${animation} object-cover sm:object-scale-down rounded-[2%]`}
           id={`Imagen ${imageIndex + 1}`}
         />
         
