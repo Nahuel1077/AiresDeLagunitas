@@ -18,7 +18,7 @@ export default function Home() {
           <h1 className="sm:text-6xl text-shadow-lg text-center">Escapada a Villa General Belgrano</h1>
           <p className="sm:text-3xl text-shadow-lg">Animate a respirar el aire de las sierras</p>
         </div>
-        <div className="xl:absolute sm:bottom-[300px] xl:block contents relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
+        <div className="xl:absolute sm:top-[80vh] xl:block contents relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
           <Link href="/tarifas"><button className="button">Ver tarifas</button></Link>
         </div>
       </div>

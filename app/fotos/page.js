@@ -20,7 +20,7 @@ export default function Fotos(){
                 <h1 className="sm:text-6xl text-xl text-shadow-lg text-center">¡Cabañas a estrenar!</h1>
                 <p className="sm:text-3xl text-xl text-shadow-lg">A pocos minutos del centro</p>
             </div>
-            <div className="xl:absolute sm:bottom-[300px] xl:block contents relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
+            <div className="xl:absolute sm:top-[80vh] xl:block contents relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
                 <Link href="#"><button className="button">Reservar</button></Link>
             </div>
             </div>

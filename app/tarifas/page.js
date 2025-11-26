@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Tarifas() {
 
     const tarifas = [
-        {id:1, title:"semana", price:1400000, discount:10,},
+        {id:1, title:"semana", price:1550000, discount:10,},
         {id:2, title:"quincena", price:2500000, discount:15,},
     ];
 
@@ -40,7 +40,7 @@ export default function Tarifas() {
                 <p className="sm:text-3xl text-xl text-shadow-lg">A pocos minutos del centro</p>
             </div>
             <div className="xl:absolute sm:bottom-[300px] xl:block contents relative z-10 items-center justify-center sm:text-3xl pt-1.5 sm:p-0">
-                <Link href="#"><button className="button" id="promo">Booking</button></Link>
+                <Link href="https://www.booking.com/Share-cgsT1H"><button className="button" id="promo">Booking</button></Link>
             </div>
             </div>
             <div className="flex flex-col items-center w-full">
@@ -48,10 +48,10 @@ export default function Tarifas() {
                 <div className="flex flex-col lg:flex-row gap-4 items-center p-6 sm:p-16 justify-evenly w-full">
                     {tarifas.map((t) => (<div key={t.id} className="card bg-[#fffbce] flex flex-col gap-2 w-[200px] text-center p-4 justify-self-stretch">
                         <h4 className="h3">Por {t.title}</h4>
-                        <h3 className="h3">Desde ${t.price*t.discount/100+t.price}</h3>
-                        <h1 className="text-3xl">-${t.price*t.discount/100}</h1>
+                        <h3 className="h3">Desde ${t.price}</h3>
+                        <h1 className="text-3xl">-${Math.floor(t.price*t.discount/100)}</h1>
                         <p>¡Descuento: {t.discount}%!</p>
-                        <h1 className="text-3xl font-semibold text-[#275717]">Total: ${t.price}</h1>
+                        <h1 className="text-3xl font-semibold text-[#275717]">Total: ${Math.floor(t.price-t.price*t.discount/100)}</h1>
                     </div>))}
                 </div>
                 <p>*Reservando directamente.</p>

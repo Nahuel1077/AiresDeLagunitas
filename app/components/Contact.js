@@ -11,7 +11,7 @@ export default function Contact(){
             <div className="sm:p-[4rem] p-2 flex flex-col xl:flex-row w-full gap-8 sm:gap-0">
                 <div className="flex flex-col self-center w-full sm:max-w-[70%] xl:w-full sm:p-[4rem] rounded-2xl bg-white gap-6 shadow-[black_0px_0px_10px_0px]">
                     <h3 className="text-3xl h3 font-semibold p-4">Escríbanos</h3>
-                    <form className="gap-10 flex flex-col p-4" action="https://formsubmit.co/nahuh08@gmail.com" method="POST">
+                    <form className="gap-10 flex flex-col p-4" action="https://formsubmit.co/altosdelagunitas@gmail.com" method="POST">
                         <div className="flex flex-col gap-2 flex-wrap items-start">
                             <label htmlFor="name">Nombre</label>
                             <input type="text" id="name" name="name" requiredplaceholder="Nombre" className="border-2 border-gray-200 rounded-md w-full md:w-[70%] h-[40px]"></input>
@@ -51,7 +51,7 @@ export default function Contact(){
                                 ✉
                                 <ul className="flex flex-col items-start">
                                     <li>Email</li>
-                                    <Link href="mailto:airesdelagunitas@gmail.com?subject=Consulta%20sobre%20reserva">airesdelagunitas@gmail.com</Link>
+                                    <Link href="mailto:altosdelagunitas@gmail.com?subject=Consulta%20sobre%20reserva">airesdelagunitas@gmail.com</Link>
                                 </ul>
                             </div>
                             <div className="flex flex-row gap-4">
