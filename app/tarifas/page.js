@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Tarifas() {
 
     const tarifas = [
-        {id:1, title:"semana", price:1550000, discount:10,},
-        {id:2, title:"quincena", price:2500000, discount:15,},
+        {id:1, title:"semana", price:930000, discount:10,},
+        {id:2, title:"quincena", price:1860000, discount:15,},
     ];
 
     return(
@@ -35,7 +35,7 @@ export default function Tarifas() {
                     className="hidden lg:block w-1/3 h-[90vh] object-contain sm:object-cover object-center brightness-50"
                     />
                 </div>
-                <div className="absolute flex flex-col gap-4 sm:gap-[3rem] text-white items-center justify-center sm:text-3xl">
+                <div className="absolute flex flex-col gap-4 sm:gap-12 text-white items-center justify-center sm:text-3xl">
                 <h1 className="sm:text-6xl text-xl text-shadow-lg text-center">¡Cabañas a estrenar!</h1>
                 <p className="sm:text-3xl text-xl text-shadow-lg">A pocos minutos del centro</p>
             </div>
