@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Tarifas() {
 
     const tarifas = [
-        {id:1, title:"semana", price:930000, discount:10,},
-        {id:2, title:"quincena", price:1860000, discount:15,},
+        {id:1, title:"semana", price:1200000, discount:10,},
+        {id:2, title:"quincena", price:2400000, discount:15,},
     ];
 
     return(
