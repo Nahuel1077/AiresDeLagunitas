@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function GridImages(){
 
@@ -64,12 +64,71 @@ export default function GridImages(){
     ];
 
     const [openImg, setOpenImg] = useState(null);
+    const [touchStartX, setTouchStartX] = useState(null);
+    const [animation, setAnimation] = useState("animate__fadeIn");
+
+    const nextImage = () => {
+    setAnimation("animate__fadeOutLeft");
+
+        setTimeout(() => {
+            setOpenImg((prev) =>
+                prev === portada.length - 1 ? 0 : prev + 1
+            );
+
+            setAnimation("animate__fadeInRight");
+        }, 300);
+    };
+
+    const prevImage = () => {
+    setAnimation("animate__fadeOutRight");
+
+        setTimeout(() => {
+            setOpenImg((prev) =>
+                prev === 0 ? portada.length - 1 : prev - 1
+            );
+
+            setAnimation("animate__fadeInLeft");
+        }, 300);
+    };
+
+    const handleTouchStart = (e) => {
+        setTouchStartX(e.touches[0].clientX);
+        };
+
+        const handleTouchEnd = (e) => {
+        if (!touchStartX) return;
+
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchStartX - touchEndX;
+
+        if (diff > 50) {
+            nextImage();
+        } else if (diff < -50) {
+            prevImage();
+        }
+
+        setTouchStartX(null);
+    };
+
+    useEffect(() => {
+    const handleKeyDown = (e) => {
+        if (openImg === null) return;
+
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        if (e.key === "Escape") setOpenImg(null);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [openImg]);
 
     return(
         <section className="flex flex-col items-center sm:pb-4 pl-2 pr-2 pb-4">
             <h3 className="h3 text-3xl font-semibold p-8 sm:p-20">Nuestras cabañas</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 sm:gap-20 gap-6">
-                {portada.map((p) => (
+                {portada.map((p, index) => (
                     <div key={p.id} className="card w-full h-[200px] sm:w-[400px] sm:h-[302px]">
                         <Image
                         src={p.src}
@@ -77,23 +136,43 @@ export default function GridImages(){
                         width={500}
                         height={500}
                         className="cardImage w-full h-[200px] sm:w-[400px] sm:h-[300px]"
-                        onClick={() => setOpenImg(p.src)}
+                        onClick={() => {
+                            setOpenImg(index);
+                            setAnimation("animate__fadeIn");
+                        }}
                         />
                 </div>
             ))}
             </div>
-            {openImg && (<div className={`${openImg? "gap-6 sm:p-30 top-0 z-20 fixed overflow-hidden w-[100vw] h-[100vh] bg-[#000000db] flex sm:flex-row flex-col-reverse items-center justify-center" : "hidden"}`}>
-                {
+            {openImg !== null && (
+                <div
+                    className="gap-6 sm:p-30 top-0 z-20 fixed overflow-hidden w-[100vw] h-[100vh] bg-[#000000db] flex sm:flex-row flex-col-reverse items-center justify-center"
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                >
                     <Image
-                    src={openImg}
-                    alt="Imagen ampliada"
-                    width={1429}
-                    height={1039}
-                    className="object-contain w-full sm:w-full sm:h-[100vh]"
+                        src={portada[openImg].src}
+                        alt={portada[openImg].alt}
+                        width={1429}
+                        height={1039}
+                        className={`
+                            object-contain
+                            w-full
+                            sm:h-[100vh]
+                            animate__animated
+                            animate__faster
+                            ${animation}
+                        `}
                     />
-                }
-                <button onClick={() => {setOpenImg(null)}} className="w-[30px] h-[30px] invert self-start">✖</button>
-            </div>)}
+
+                    <button
+                        onClick={() => setOpenImg(null)}
+                        className="w-[30px] h-[30px] invert self-start"
+                    >
+                        ✖
+                    </button>
+                </div>
+            )}
         </section>
     )
 }

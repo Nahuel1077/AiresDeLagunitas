@@ -50,7 +50,7 @@ export default function Carousel(){
           height={700}
           src={carouselImages[imageIndex].src}
           alt={`Imagen ${imageIndex + 1}`}
-          className={`w-full h-[300px] sm:w-[70vw] sm:h-[500px] 2xl:h-[700px] animate__animated ${animation} object-cover sm:object-scale-down rounded-[2%]`}
+          className={`w-full h-[300px] sm:w-[70vw] sm:h-[500px] 2xl:h-[700px] animate__animated ${animation} object-cover sm:object-scale-down`}
           id={`Imagen ${imageIndex + 1}`}
         />
         

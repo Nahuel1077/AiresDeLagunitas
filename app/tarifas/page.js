@@ -1,12 +1,11 @@
-import Carousel from "../components/Carousel";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Tarifas() {
 
     const tarifas = [
-        {id:1, title:"semana", price:1200000, discount:10,},
-        {id:2, title:"quincena", price:2400000, discount:15,},
+        {id:1, title:"semana", price:1053070, discount:10,},
+        {id:2, title:"quincena", price:2106140, discount:15,},
     ];
 
     return(
@@ -44,7 +43,7 @@ export default function Tarifas() {
             </div>
             </div>
             <div className="flex flex-col items-center w-full">
-                <h3 className="highlight sm:h1 text-3xl text-center sm:p-10 p-4">¡Promo de estreno!</h3>
+                <h3 className="highlight sm:h1 text-3xl text-center sm:p-10 p-4">¡Promo de invierno!</h3>
                 <div className="flex flex-col lg:flex-row gap-4 items-center p-6 sm:p-16 justify-evenly w-full">
                     {tarifas.map((t) => (<div key={t.id} className="card bg-[#fffbce] flex flex-col gap-2 w-[200px] text-center p-4 justify-self-stretch">
                         <h4 className="h3">Por {t.title}</h4>

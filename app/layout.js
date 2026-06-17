@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       >
         <Nav/>
         {children}
-        <Banner/>
+       
         <footer className={`${rubik.className} flex flex-col bg-white`}>
           <div className="flex flex-col w-full justify-center">
             <Image
@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
           <section className="flex flex-col p-6 sm:flex-row-reverse gap-6 justify-around items-center bg-black">
           <ul className="flex flex-col  gap-2 text-white items-center text-md">
             <Link href="/faq" className="hover:underline">FAQ</Link>
-            <Link href="/" className="hover:underline">Reservas</Link>
+            <Link href="/reservas" className="hover:underline">Reservas</Link>
             <Link className="hover:underline" href="https://docs.google.com/document/d/e/2PACX-1vT8UnXfUQUBWd9WzMud7IzR0rdiEwH-U9ej1D1lWWsYb-Q-Y7dGkcGPyY08YwOPmJNKHWqmZ0LKybas/pub">Términos y condiciones</Link>
           </ul>
           <Image
