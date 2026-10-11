@@ -51,7 +51,7 @@ export default function Contact(){
                                 ✉
                                 <ul className="flex flex-col items-start">
                                     <li>Email</li>
-                                    <Link href="mailto:altosdelagunitas@gmail.com?subject=Consulta%20sobre%20reserva">airesdelagunitas@gmail.com</Link>
+                                    <Link href="mailto:altosdelagunitas@gmail.com?subject=Consulta%20sobre%20reserva">altosdelagunitas@gmail.com</Link>
                                 </ul>
                             </div>
                             <div className="flex flex-row gap-4">
